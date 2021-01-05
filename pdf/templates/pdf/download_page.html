@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- bootstrap cdn -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-md-8">
+        <div class="col-md-5">
+          {% for user in resume %}
+              <h2>{{user.id}}</h2>  <h1>{{user.name}}</h1>
+          <a class="btn btn-primary" href="/{{user.id}}">Download</a>
+          <hr>
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
